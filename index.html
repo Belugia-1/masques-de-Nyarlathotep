@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planisphère Interactif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .map-container {
+      position: relative;
+      display: inline-block;
+    }
+    .marker {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .popup {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+      z-index: 10;
+    }
+    .marker:hover .popup {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Planisphère Interactif</h1>
+  <div class="map-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/BlankMap-World.png/1280px-BlankMap-World.png" alt="Planisphère" />
+
+    <!-- Exemple de points interactifs -->
+    <div class="marker" style="top: 40%; left: 52%;">
+      <div class="popup">
+        <strong>Paris</strong><br />
+        Ville lumière, capitale de la France.
+      </div>
+    </div>
+
+    <div class="marker" style="top: 50%; left: 78%;">
+      <div class="popup">
+        <strong>Tokyo</strong><br />
+        Capitale du Japon, ville high-tech.
+      </div>
+    </div>
+
+    <div class="marker" style="top: 60%; left: 33%;">
+      <div class="popup">
+        <strong>New York</strong><br />
+        Big Apple, ville emblématique des USA.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
